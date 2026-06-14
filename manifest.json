@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Commenter",
+  "version": "1.0.0",
+  "description": "Auto-post promo comments on YouTube videos",
+  "permissions": ["activeTab", "scripting", "tabs", "storage", "notifications", "webNavigation"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "icons": {
+    "16":  "icons/icon16.png",
+    "48":  "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "YouTube Commenter",
+    "default_icon": {
+      "16":  "icons/icon16.png",
+      "48":  "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  }
+}
