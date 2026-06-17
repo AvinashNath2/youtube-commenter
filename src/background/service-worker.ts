@@ -176,11 +176,10 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 })
 
-chrome.runtime.onInstalled.addListener(async () => {
-  // Seed storage with defaults only on first install
-  const res = await chrome.storage.local.get('promoComments')
-  if (!res.promoComments) {
+chrome.runtime.onInstalled.addListener(async ({ reason }) => {
+  // Always reset promo comments on install or update so new defaults take effect
+  if (reason === 'install' || reason === 'update') {
     await chrome.storage.local.set({ promoComments: DEFAULT_COMMENTS })
   }
-  console.log('[YouTube Commenter] Installed.')
+  console.log('[YouTube Commenter] Installed/Updated.')
 })
