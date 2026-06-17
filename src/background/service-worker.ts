@@ -1,13 +1,16 @@
+const STORE_LINKS = '\n\nAndroid: https://play.google.com/store/apps/details?id=com.gntfamily.timeline.net.in\niPhone: https://apps.apple.com/in/app/timeline-social-app/id6765680749'
+
 const DEFAULT_COMMENTS = [
-  '🇮🇳 Building an Indian social network. Try it:\ntimeline.net.in',
-  '🇮🇳 Made in India social media. Check out timeline.net.in',
-  "🇮🇳 Join India's new social platform at timeline.net.in",
-  '🇮🇳 Building social media for India. Visit timeline.net.in',
-  '🇮🇳 A social network built for Indians — timeline.net.in',
-  "🇮🇳 India's own social platform is here: timeline.net.in",
-  '🇮🇳 Creating the next Indian social network. Try timeline.net.in',
-  '🇮🇳 Explore a homegrown Indian social app: timeline.net.in',
-  '🇮🇳 Connecting India through social media. Visit timeline.net.in',
+  '🇮🇳 Building an Indian social network. Try it: timeline.net.in' + STORE_LINKS,
+  '🇮🇳 Made in India social media. Check out timeline.net.in' + STORE_LINKS,
+  "🇮🇳 Join India's new social platform at timeline.net.in" + STORE_LINKS,
+  '🇮🇳 Building social media for India. Visit timeline.net.in' + STORE_LINKS,
+  '🇮🇳 A social network built for Indians — timeline.net.in' + STORE_LINKS,
+  "🇮🇳 India's own social platform is here: timeline.net.in" + STORE_LINKS,
+  '🇮🇳 Creating the next Indian social network. Try timeline.net.in' + STORE_LINKS,
+  '🇮🇳 Explore a homegrown Indian social app: timeline.net.in' + STORE_LINKS,
+  '🇮🇳 Connecting India through social media. Visit timeline.net.in' + STORE_LINKS,
+  '🇮🇳 Building India\'s social timeline. Join at timeline.net.in' + STORE_LINKS,
 ]
 
 async function getComments(): Promise<string[]> {
